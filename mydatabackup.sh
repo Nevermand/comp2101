@@ -4,4 +4,4 @@
 
 cd ~/mydata
 mkdir ~/mydata-backup
-tar -cf - | (cd ~/mydata-backup;tar -xf -)
+tar cf - | (cd ~/mydata-backup; tar xf -)
