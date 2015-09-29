@@ -1,0 +1,15 @@
+#!/bin/bash
+
+#this script lists all the setuid and setgid regualr files in /usr
+# the file are displayed using ls -l and sorted by user and group
+#respectively
+
+echo "These files are set uid"
+echo "+++++++++++++++++++++++++++"
+
+find /usr -type f -perm -4000 -exec ls -l {} \; | sort -k 3
+
+echo 
+echo "these are set gid"
+echo "+++++++++++++++++++++++++++"
+find /usr -type f -perm -2000 -exec ls -l {} \; | sort -k 4
